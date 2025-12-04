@@ -123,7 +123,7 @@ export default function GamePage() {
         };
         
         // Delay before next advance
-        const timer = setTimeout(advance, 1000);
+        const timer = setTimeout(advance, 2_500);
         return () => clearTimeout(timer);
     }, [game, isAdvancing, params.gameId, viewingRoundIndex]);
 
