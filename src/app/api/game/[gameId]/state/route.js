@@ -34,6 +34,9 @@ export async function GET(request, {params}) {
         roundObj.votes = round.votes;
         roundObj.scores = round.scoresRoundEnd;
         roundObj.ejected = round.ejected;
+        if(roundObj.ejected) {
+            roundObj.ejected.impostor = round.scenario.impostor;
+        }
         roundObj.over = round.over;
 
         rounds.push(roundObj);

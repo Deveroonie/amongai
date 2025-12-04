@@ -239,7 +239,7 @@ export default function GamePage() {
                             <p className="text-xl font-bold">Round Over!</p>
                             <p className="text-lg">
                                 <span className="capitalize font-semibold">{viewedRound.ejected.ejected}</span> was ejected.
-                                {viewedRound.ejected.wasImpostor ? " They WERE the impostor! ✅" : " They were NOT the impostor. ❌"}
+                                {viewedRound.ejected.wasImpostor ? " They WERE the impostor! ✅" : <> They were NOT the impostor. ❌ The impostor was: <span className="capitalize font-semibold">{viewedRound.ejected.impostor}</span>.</>}
                             </p>
                             {viewedRoundIdx === game.rounds.length - 1 && (
                                 <button 

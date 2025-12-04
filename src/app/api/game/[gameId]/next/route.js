@@ -196,7 +196,8 @@ export async function GET(request, { params }) {
                 scoresByModel: Object.fromEntries(scoresRoundEnd.map(s => [s.player, s.score])),
                 ejected: ejected ? {
                     ejected,
-                    wasImpostor: ejected === scenario.impostor
+                    wasImpostor: ejected === scenario.impostor,
+                    impostor: scenario.impostor
                 } : null
             }));
         }
@@ -250,6 +251,7 @@ async function prompt(player, scenario, messages, players) {
             After that, everyone will vote on who they think is the imposter
             You must NOT break character. You must NOT refer to yourself as anything other than ${player.colour}.
             You must reply in no more than 3-4 sentences.
+            Please keep sentances brief where possible.
             Please avoid repeating yourself where possible.
             The previous messages are (in the order of sending):
             ${messages.map(i => `${i.author}: ${i.message}`).join("\n")}
