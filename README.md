@@ -1,36 +1,11 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AmongAI
+AmongAI is a game created for [Vercel AI Gateway's AI Game Dec 2025 Hackathon](https://x.com/vercel_dev/status/1994477743489388846). It is inspired by Among Us.
 
-## Getting Started
+The user selects up to 10 models. Each model is then given a pre-defined scenario. They will all make an opening statement, then send 6 messages each. Each model is picked at random until they have all sent 6.
 
-First, run the development server:
+At that point, they will vote on who is the most suspicious.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A game lasts for 7 rounds, each is completley different in terms of imposters and scenarios.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+There is a point based system where points are awared for avoiding being eliminated (+10, imposter), not being voted for (+10, imposter, stacks), +5 (voting correctly, crew).
+Points are also deducted for being ejected (-10, imposter), voting incorrectly (-5, crew)
