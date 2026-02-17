@@ -8,6 +8,7 @@ const models = [
     {name: "Claude 4.5 Haiku", api: "anthropic/claude-haiku-4.5", provider: "Anthropic"},
     {name: "Claude 4.5 Sonnet", api: "anthropic/claude-sonnet-4.5", provider: "Anthropic"},
     {name: "Claude 4.5 Opus", api: "anthropic/claude-opus-4.5", provider: "Anthropic"},
+    {name: "Claude 4.6 Sonnet", api: "anthropic/claude-sonnet-4.6", "provider": "Anthropic"},
     {name: "Claude 4.6 Opus", api: "anthropic/claude-opus-4.6", provider: "Anthropic"},
     // OpenAI
     {name: "GPT 3.5 Turbo", api: "openai/gpt-3.5-turbo", provider: "OpenAI"},
